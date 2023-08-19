@@ -15,7 +15,6 @@ public class StudyQueryTask extends PatientQueryTask {
     Attributes rq,
     Attributes keys,
     QueryTaskInject queryTaskInject,
-    QueryTaskOptions queryTaskOptions,
     PatientQueryTaskInject patientQueryTaskInject,
     StudyQueryTaskInject studyQueryTaskInject
   ) throws DicomServiceException {
@@ -25,7 +24,6 @@ public class StudyQueryTask extends PatientQueryTask {
       rq,
       keys,
       queryTaskInject,
-      queryTaskOptions,
       patientQueryTaskInject
     );
     myStudyQueryTaskInject = studyQueryTaskInject;
