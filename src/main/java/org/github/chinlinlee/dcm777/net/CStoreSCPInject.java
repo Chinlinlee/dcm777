@@ -12,10 +12,10 @@ import org.dcm4che3.net.pdu.PresentationContext;
 
 public interface CStoreSCPInject {
 
-    public void postDimseRQ(Association as, PresentationContext pc, Dimse dimse,
-            Attributes rq, PDVInputStream data, Attributes rsp);
+    public void postDimseRQ(Association as, PresentationContext pc, Dimse dimse, Attributes rq,
+            PDVInputStream data, Attributes rsp);
 
-    public void postStore(Association as, PresentationContext pc, Attributes rq,
-            InputStream data, Attributes rsp, File file);
+    public void postStore(Association as, PresentationContext pc, Attributes rq, InputStream data,
+            Attributes rsp, File file);
 
 }

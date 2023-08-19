@@ -7,25 +7,12 @@ import org.dcm4che3.net.service.DicomServiceException;
 
 public class StudyQueryTask extends PatientQueryTask {
 
-  StudyQueryTaskInject myStudyQueryTaskInject;
+    StudyQueryTaskInject myStudyQueryTaskInject;
 
-  StudyQueryTask(
-    Association as,
-    PresentationContext pc,
-    Attributes rq,
-    Attributes keys,
-    QueryTaskInject queryTaskInject,
-    PatientQueryTaskInject patientQueryTaskInject,
-    StudyQueryTaskInject studyQueryTaskInject
-  ) throws DicomServiceException {
-    super(
-      as,
-      pc,
-      rq,
-      keys,
-      queryTaskInject,
-      patientQueryTaskInject
-    );
-    myStudyQueryTaskInject = studyQueryTaskInject;
-  }
+    StudyQueryTask(Association as, PresentationContext pc, Attributes rq, Attributes keys,
+            QueryTaskInject queryTaskInject, PatientQueryTaskInject patientQueryTaskInject,
+            StudyQueryTaskInject studyQueryTaskInject) throws DicomServiceException {
+        super(as, pc, rq, keys, queryTaskInject, patientQueryTaskInject);
+        myStudyQueryTaskInject = studyQueryTaskInject;
+    }
 }

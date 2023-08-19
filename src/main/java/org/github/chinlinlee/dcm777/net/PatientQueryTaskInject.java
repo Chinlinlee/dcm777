@@ -4,9 +4,9 @@ import java.io.IOException;
 import org.dcm4che3.net.service.DicomServiceException;
 
 public interface PatientQueryTaskInject {
-  void wrappedFindNextPatient() throws DicomServiceException;
+    void wrappedFindNextPatient() throws DicomServiceException;
 
-  void getPatient();
+    void getPatient();
 
-  boolean findNextPatient() throws IOException;
+    boolean findNextPatient() throws IOException;
 }

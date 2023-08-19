@@ -42,7 +42,7 @@ public class BasicModCFindSCP extends BasicCFindSCP {
 
     public QueryRetrieveLevel2 getQrLevel(Association as, PresentationContext pc, Attributes rq,
             Attributes keys) throws DicomServiceException {
-        return QueryRetrieveLevel2.validateQueryIdentifier(keys, qrLevels, relational(as, rq),
+        return QueryRetrieveLevel2.validateQueryIdentifier(keys, this.qrLevels, relational(as, rq),
                 false);
     }
 
