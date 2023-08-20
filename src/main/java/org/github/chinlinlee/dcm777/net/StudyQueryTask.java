@@ -26,4 +26,8 @@ public class StudyQueryTask extends PatientQueryTask {
             throw new DicomServiceException(Status.UnableToProcess, e);
         }
     }
+
+    public boolean findNextStudy() throws IOException {
+        return myStudyQueryTaskInject.findNextStudy();
+    }
 }

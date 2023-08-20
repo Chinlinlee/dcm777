@@ -31,7 +31,7 @@ public class PatientQueryTask extends BasicModQueryTask {
         myPatientQueryTaskInject.getPatient();
     }
 
-    protected boolean findNextPatient() throws IOException {
+    public boolean findNextPatient() throws IOException {
         return myPatientQueryTaskInject.findNextPatient();
     }
 }

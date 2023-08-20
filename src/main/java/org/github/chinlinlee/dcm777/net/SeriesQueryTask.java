@@ -27,4 +27,8 @@ public class SeriesQueryTask extends StudyQueryTask {
             throw new DicomServiceException(Status.UnableToProcess, e);
         }
     }
+
+    public boolean findNextSeries() throws IOException {
+        return mySeriesQueryTaskInject.findNextSeries();
+    }
 }
