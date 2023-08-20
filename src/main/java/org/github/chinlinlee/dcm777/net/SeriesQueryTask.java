@@ -17,7 +17,6 @@ public class SeriesQueryTask extends StudyQueryTask {
 
         super(as, pc, rq, keys, queryTaskInject, patientQueryTaskInject, studyQueryTaskInject);
         mySeriesQueryTaskInject = seriesQueryTaskInject;
-        wrappedFindNextSeries();
     }
 
     private void wrappedFindNextSeries() throws DicomServiceException {

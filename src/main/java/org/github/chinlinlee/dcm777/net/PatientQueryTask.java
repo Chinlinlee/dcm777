@@ -16,7 +16,6 @@ public class PatientQueryTask extends BasicModQueryTask {
             throws DicomServiceException {
         super(as, pc, rq, keys, queryTaskInject);
         myPatientQueryTaskInject = patientQueryTaskInject;
-        wrappedFindNextPatient();
     }
 
     private void wrappedFindNextPatient() throws DicomServiceException {

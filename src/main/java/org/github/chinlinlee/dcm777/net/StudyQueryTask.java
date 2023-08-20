@@ -16,7 +16,6 @@ public class StudyQueryTask extends PatientQueryTask {
             StudyQueryTaskInject studyQueryTaskInject) throws DicomServiceException {
         super(as, pc, rq, keys, queryTaskInject, patientQueryTaskInject);
         myStudyQueryTaskInject = studyQueryTaskInject;
-        wrappedFindNextStudy();
     }
 
     private void wrappedFindNextStudy() throws DicomServiceException {
