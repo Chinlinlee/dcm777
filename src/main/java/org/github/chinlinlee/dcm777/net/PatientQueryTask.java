@@ -11,7 +11,7 @@ public class PatientQueryTask extends BasicModQueryTask {
 
     PatientQueryTaskInject myPatientQueryTaskInject;
 
-    PatientQueryTask(Association as, PresentationContext pc, Attributes rq, Attributes keys,
+    public PatientQueryTask(Association as, PresentationContext pc, Attributes rq, Attributes keys,
             QueryTaskInject queryTaskInject, PatientQueryTaskInject patientQueryTaskInject)
             throws DicomServiceException {
         super(as, pc, rq, keys, queryTaskInject);
