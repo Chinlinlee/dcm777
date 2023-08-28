@@ -16,6 +16,7 @@ import org.dcm4che3.net.pdu.PresentationContext;
 import org.dcm4che3.net.service.BasicRetrieveTask;
 import org.dcm4che3.net.service.InstanceLocator;
 import org.dcm4che3.util.SafeClose;
+import org.dcm4che3.util.StringUtils;
 
 
 public class RetrieveTaskImpl extends BasicRetrieveTask {
@@ -45,11 +46,13 @@ public class RetrieveTaskImpl extends BasicRetrieveTask {
                 attrs = in.readDataset();
             }
             this.myAudit.setEventResult(EventOutcomeIndicator.Success);
-            this.myAudit.onBeginTransferringDICOMInstances(attrs.getStrings(Tag.StudyInstanceUID));
+            String studyInstanceUID = attrs.getString(Tag.StudyInstanceUID);
+            this.myAudit.onBeginTransferringDICOMInstances(studyInstanceUID);
         } finally {
             SafeClose.close(in);
             this.myAudit.setEventResult(EventOutcomeIndicator.Success);
-            this.myAudit.onDicomInstancesTransferred(attrs.getStrings(Tag.StudyInstanceUID));
+            String studyInstanceUID = attrs.getString(Tag.StudyInstanceUID);
+            this.myAudit.onDicomInstancesTransferred(studyInstanceUID);
         }
         if (delayCStore > 0)
             try {
