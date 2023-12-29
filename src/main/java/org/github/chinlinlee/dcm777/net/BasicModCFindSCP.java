@@ -22,6 +22,11 @@ public class BasicModCFindSCP extends BasicCFindSCP {
         super(sopClasses);
     }
 
+    public BasicModCFindSCP(CFindSCPInject findSCPInject, String... sopClass) {
+        super(sopClass);
+        myCFindSCPInject = findSCPInject;
+    }
+
     public BasicModCFindSCP(CFindSCPInject findSCPInject, String sopClass,
             EnumSet<QueryRetrieveLevel2> qrLevels) {
         super(sopClass);
