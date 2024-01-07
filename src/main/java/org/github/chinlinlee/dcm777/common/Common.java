@@ -6,7 +6,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
+import java.util.Map;
 import javax.json.Json;
+import javax.json.stream.JsonGenerator;
 import org.dcm4che3.audit.AuditMessage;
 import org.dcm4che3.audit.AuditMessages;
 import org.dcm4che3.data.Attributes;
@@ -57,5 +60,13 @@ public class Common {
         JSONObject jsonObj = XML.toJSONObject(xmlString);
 
         return jsonObj.toString();
+    }
+
+    public static Map<String, ?> jsonGeneratorFactoryConfig(boolean isIndent) {
+        Map<String, ?> conf = new HashMap<String, Object>(2);
+        if (isIndent) {
+            conf.put(JsonGenerator.PRETTY_PRINTING, null);
+        }
+        return conf;
     }
 }
