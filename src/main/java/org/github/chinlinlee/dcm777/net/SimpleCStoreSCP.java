@@ -64,10 +64,10 @@ public class SimpleCStoreSCP extends BasicCStoreSCP {
         try {
             Attributes fmi = as.createFileMetaInformation(iuid, cuid, tsuid);
             storeTo(as, fmi, data, file);
-            myStoreSCPInject.postStore(as, pc, rq, data, rsp, file);
         } catch (Exception e) {
             throw new DicomServiceException(Status.ProcessingFailure, e);
         }
+        myStoreSCPInject.postStore(as, pc, rq, data, rsp, file);
     }
 
     public void storeTo(Association as, Attributes fmi, PDVInputStream data, File file)
