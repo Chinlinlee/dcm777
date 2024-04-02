@@ -56,14 +56,14 @@
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
-            <version>20230618</version>
+            <version>20231013</version>
         </dependency>
 
 
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.4.8</version>
+            <version>1.4.12</version>
             <scope>compile</scope>
         </dependency>
 
@@ -71,7 +71,7 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
-            <version>1.4.8</version>
+            <version>1.4.12</version>
         </dependency>
 
     </dependencies>
