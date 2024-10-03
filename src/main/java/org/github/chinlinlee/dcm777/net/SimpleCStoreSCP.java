@@ -48,6 +48,11 @@ public class SimpleCStoreSCP extends BasicCStoreSCP {
             throw new DicomServiceException(Status.UnrecognizedOperation);
         }
 
+        boolean preDimseRQStatus = myStoreSCPInject.preDimseRQ(as, pc, dimse, rq, data);
+        if (!preDimseRQStatus) {
+            return;
+        }
+
         Attributes rsp = Commands.mkCStoreRSP(rq, Status.Success);
         this.store(as, pc, rq, data, rsp);
         myStoreSCPInject.postDimseRQ(as, pc, dimse, rq, data, rsp);

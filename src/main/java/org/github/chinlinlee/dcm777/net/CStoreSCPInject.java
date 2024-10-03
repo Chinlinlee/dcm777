@@ -12,6 +12,9 @@ import org.dcm4che3.net.pdu.PresentationContext;
 
 public interface CStoreSCPInject {
 
+        public boolean preDimseRQ(Association as, PresentationContext pc, Dimse dimse, Attributes rq,
+                PDVInputStream data);
+
     public void postDimseRQ(Association as, PresentationContext pc, Dimse dimse, Attributes rq,
             PDVInputStream data, Attributes rsp);
 
