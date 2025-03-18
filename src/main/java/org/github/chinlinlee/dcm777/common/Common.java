@@ -14,6 +14,7 @@ import org.dcm4che3.audit.AuditMessage;
 import org.dcm4che3.audit.AuditMessages;
 import org.dcm4che3.data.Attributes;
 import org.dcm4che3.json.JSONReader;
+import org.dcm4che3.net.service.DicomServiceException;
 import org.dcm4che3.util.SafeClose;
 import org.json.JSONObject;
 import org.json.XML;
@@ -68,5 +69,21 @@ public class Common {
             conf.put(JsonGenerator.PRETTY_PRINTING, null);
         }
         return conf;
+    }
+
+    public static void throwDicomServiceException(int status) throws DicomServiceException {
+        throw new DicomServiceException(status);
+    }
+
+    public static void throwDicomServiceException(int status, String message) throws DicomServiceException {
+        throw new DicomServiceException(status, message);
+    }
+
+    public static void throwDicomServiceException(int status, String message, boolean errorComment) throws DicomServiceException {
+        throw new DicomServiceException(status, message, errorComment);
+    }
+
+    public static void throwDicomServiceExceptionInstance(DicomServiceException exception) throws DicomServiceException {
+        throw exception;
     }
 }
